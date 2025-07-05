@@ -21,6 +21,7 @@ src/firebase.js
 src/firebaseConfig.js
 src/firebaseConfig.json
 src/firebaseConfig.prod.json
+src/pages/text.txt
 # Editor directories and files
 .vscode/*e
 !.vscode/extensions.json

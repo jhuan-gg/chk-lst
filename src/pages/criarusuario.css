@@ -1,0 +1,123 @@
+.criarusuario-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.criarusuario-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 var(--shadow);
+  padding: 2.5rem 2rem;
+  min-width: 340px;
+  max-width: 95vw;
+  width: 100%;
+}
+
+.criarusuario-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.criarusuario-input,
+.criarusuario-select {
+  padding: 0.7rem 1rem;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+.criarusuario-input:focus,
+.criarusuario-select:focus {
+  border-color: var(--primary);
+}
+
+.criarusuario-btn {
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.criarusuario-btn:hover {
+  background: var(--primary-dark);
+}
+
+.criarusuario-msg {
+  color: var(--success);
+  background: rgba(16,185,129,0.08);
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.criarusuario-erro {
+  color: var(--error);
+  background: rgba(249,115,22,0.08);
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .criarusuario-container {
+    padding: 0.5rem;
+  }
+  .criarusuario-box {
+    min-width: unset;
+    max-width: 100vw;
+    padding: 1.2rem 0.5rem;
+    border-radius: 12px;
+  }
+  .criarusuario-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+  }
+  .criarusuario-input,
+  .criarusuario-select {
+    font-size: 0.98rem;
+    padding: 0.6rem 0.7rem;
+  }
+  .criarusuario-btn {
+    font-size: 1rem;
+    padding: 0.7rem 0;
+  }
+  .criarusuario-msg,
+  .criarusuario-erro {
+    font-size: 0.95rem;
+    padding: 0.4rem;
+  }
+}
+
+/* Responsividade extra para telas muito pequenas */
+@media (max-width: 400px) {
+  .criarusuario-box {
+    padding: 0.7rem 0.2rem;
+    border-radius: 8px;
+  }
+  .criarusuario-title {
+    font-size: 1.05rem;
+  }
+}

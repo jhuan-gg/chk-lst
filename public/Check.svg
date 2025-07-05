@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <!-- Caderno -->
+  <rect x="15" y="15" width="50" height="70" rx="8" fill="#85308d" stroke="#4B2354" stroke-width="3"/>
+
+  <!-- Linhas do caderno -->
+  <line x1="25" y1="30" x2="55" y2="30" stroke="white" stroke-width="3"/>
+  <line x1="25" y1="45" x2="55" y2="45" stroke="white" stroke-width="3"/>
+  <line x1="25" y1="60" x2="55" y2="60" stroke="white" stroke-width="3"/>
+  <line x1="25" y1="75" x2="55" y2="75" stroke="white" stroke-width="3"/>
+
+  <!-- Check grande ao lado -->
+  <path d="M65 50 L75 62 L90 35" stroke="#4CAF50" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

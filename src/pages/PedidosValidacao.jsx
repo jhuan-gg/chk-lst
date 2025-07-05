@@ -21,6 +21,7 @@ const statusInfo = {
   },
 };
 
+
 export default function PedidosValidacao() {
   const [pedidos, setPedidos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -35,8 +36,10 @@ export default function PedidosValidacao() {
     const unsubscribe = onSnapshot(
       pedidosQuery,
       (snapshot) => {
+        // Filtra apenas os pedidos do usuário logado
         const pedidosData = snapshot.docs
-          .map(doc => ({ id: doc.id, ...doc.data() }));
+          .map(doc => ({ id: doc.id, ...doc.data() }))
+          .filter(p => p.nomeUsuario === userName);
         setPedidos(pedidosData);
         setLoading(false);
       },
@@ -46,7 +49,7 @@ export default function PedidosValidacao() {
       }
     );
     return () => unsubscribe();
-  }, []);
+  }, [userName]);
 
   return (
     <div className="criarusuario-container" style={{ minHeight: "100vh" }}>

@@ -88,7 +88,6 @@ export default function Checklist() {
   };
 
   return (
-    <div className="criarusuario-container">
       <div
         className="criarusuario-box"
         style={{ minWidth: 370, maxWidth: 600, width: "100%" }}
@@ -200,6 +199,5 @@ export default function Checklist() {
           })}
         </div>
       </div>
-    </div>
   );
 }

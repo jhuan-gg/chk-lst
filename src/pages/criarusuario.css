@@ -9,21 +9,83 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  background: var(--card-bg);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px 0 var(--shadow);
-  padding: 2.5rem 2rem;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(99,102,241,0.10), 0 2px 12px 0 rgba(99,102,241,0.08);
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
   min-width: 340px;
   max-width: 95vw;
   width: 100%;
+  border: 1.5px solid #e0e7ff;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.criarusuario-box:hover {
+  box-shadow: 0 12px 40px 0 rgba(99,102,241,0.16), 0 4px 18px 0 rgba(99,102,241,0.10);
+  border: 1.5px solid #6366f1;
 }
 
 .criarusuario-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--primary-dark);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #4338ca;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #6366f1 30%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dashboardfuncionario-list {
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboardfuncionario-list li {
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 6px #6366f11a;
+  border: 1px solid #e0e7ff;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.dashboardfuncionario-list li:hover {
+  box-shadow: 0 4px 16px #6366f133;
+  border: 1px solid #6366f1;
+}
+
+.dashboardfuncionario-label {
+  color: #3730a3;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.dashboardfuncionario-status {
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 2px 12px;
+  border-radius: 6px;
+  background: #eef2ff;
+  min-width: 90px;
+  text-align: center;
+}
+.dashboardfuncionario-status.aprovado {
+  color: #22c55e;
+  background: #dcfce7;
+}
+.dashboardfuncionario-status.recusado {
+  color: #dc2626;
+  background: #fee2e2;
+}
+.dashboardfuncionario-status.analise {
+  color: #2563eb;
+  background: #dbeafe;
 }
 
 .criarusuario-input,

@@ -36,7 +36,6 @@ export default function DashboardFuncionario() {
     .reduce((acc, p) => acc + Number(p.pontuacao || 0), 0);
 
   return (
-    <div className="criarusuario-container" style={{ minHeight: "100vh" }}>
       <div className="criarusuario-box" style={{ maxWidth: 420, width: "100%" }}>
         <div className="criarusuario-title" style={{ textAlign: "center" }}>
           <FaChartLine style={{ color: "#6366f1", marginRight: 8 }} />
@@ -58,25 +57,19 @@ export default function DashboardFuncionario() {
               <ResumoCard icon={<FaChartLine />} label="Total de pedidos" value={total} color="#6366f1" />
             </div>
             <div style={{ marginTop: 10 }}>
-              <h4 style={{ color: "#6366f1", marginBottom: 8, fontSize: "1.05rem" }}>Últimos pedidos</h4>
-              <ul style={{ padding: 0, listStyle: "none", margin: 0 }}>
+              <h4 style={{ color: "#6366f1", marginBottom: 8, fontSize: "1.08rem", fontWeight: 700, letterSpacing: "-0.5px" }}>Últimos pedidos</h4>
+              <ul className="dashboardfuncionario-list">
                 {pedidos.slice(0, 5).map(p => (
-                  <li key={p.id} style={{
-                    background: "#f3f4f6",
-                    borderRadius: 7,
-                    marginBottom: 7,
-                    padding: "0.5rem 0.7rem",
-                    fontSize: "0.98rem",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center"
-                  }}>
-                    <span style={{ color: "#3730a3", fontWeight: 500 }}>{p.nomeRegra}</span>
-                    <span style={{
-                      color: p.status === "pedido aceito" ? "#22c55e" : p.status === "pedido recusado" ? "#dc2626" : "#2563eb",
-                      fontWeight: 600,
-                      fontSize: "0.97rem"
-                    }}>
+                  <li key={p.id}>
+                    <span className="dashboardfuncionario-label">{p.nomeRegra}</span>
+                    <span className={
+                      "dashboardfuncionario-status " +
+                      (p.status === "pedido aceito"
+                        ? "aprovado"
+                        : p.status === "pedido recusado"
+                        ? "recusado"
+                        : "analise")
+                    }>
                       {p.status}
                     </span>
                   </li>
@@ -91,7 +84,6 @@ export default function DashboardFuncionario() {
           </>
         )}
       </div>
-    </div>
   );
 }
 
